@@ -2473,7 +2473,7 @@ display: none;
 
 #separator2{
 	width:100%;
-	background: url('../images/3.jpg') repeat center top fixed;
+	background: url('../images/support.jpg') repeat center top fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -2568,8 +2568,10 @@ display: none;
 .singleproject-top{
 	position:relative;
 	width:100%;
-	background:#0074D9;
-	padding-top:50px;
+   background: url(../images/review.jpg) center center no-repeat fixed;
+
+   /* background: url('../images/review.jpg') no-repeat fixed;*/
+    padding-top:50px;
 	padding-bottom:50px;
 }
 .singleproject-top img{
@@ -2602,6 +2604,41 @@ display: none;
 #singleproject .btn-wrap{
 	margin:0;
 	text-align:left;
+}
+
+.others {
+	background:rgba(0,0,0,.6);
+}
+
+.others  ul {
+float:left;
+}
+
+.others ul li {
+display: inline;
+padding :10px;
+
+	}
+.others ul li a img{
+	height :100px;
+	width :120px;
+
+	}
+
+.others ul li a caption{
+	color :white;
+	display: block;
+	}
+
+.others ul li :hover{
+	background: rgba(0,0,0,.7);
+	padding :0.5px;
+
+	}
+.social-dev{ 
+	position:relative;
+	z-index:99;
+	height:50px;
 }
 	
 

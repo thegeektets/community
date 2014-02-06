@@ -1,15 +1,18 @@
-﻿<!DOCTYPE html>
+<!--support.php -->
+<!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]>
 <!--><html class="no-js" lang="en"><!--<![endif]-->
-<?php $this->load->helper('url')?>
 
 <head>
+
+	<?php $this->load->helper('url') ;?>
+
 
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Equiplex Developers Community</title>
+	<title>Equiplex Developers Community : About Us</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -17,163 +20,131 @@
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
+
+
+ 
+
 	<!-- CSS
   ================================================== -->
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/base.css") ?>"/>
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/skeleton.css") ?>"/>
 	<link rel="stylesheet" href="<?php echo base_url("assets/css/layout.css") ?>"/>
-	<link rel="stylesheet" href="<?php echo base_url("assets/css/colorbox.css") ?>"/>
+	<link rel="stylesheet" href="<?php echo base_url("assets/css/colorbox.css") ?>"/
 	
     <!--[if lte IE 8]>
-        <script src="<?php echo base_url("assets/js/html5.js") ?>"></script>
-    <![endif]-->		
+           <script src="<?php echo base_url("assets/js/html5.js") ?>"></script>
+   <![endif]-->		
 		
 	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="<?php echo base_url("assets/equiplexfav.ico") ?>">
-	</head>
+</head>
 <body>
 
 
 
 	<!-- Primary Page Layout
 	================================================== -->
-	
-	
 
-	<!-- Home
-	================================================== -->	
-
-	<div id="home">
-		<div class="logo-big">
-			<div class="logo">
-				<img src="<?php echo base_url("assets/images/community.png") ?>" height="80px" width="100px">
-			</div>
-			<div class="title">
-				Equiplex Developers Community
-			</div>
-			<span>
-				 share with the rest of us				
-			</span>
-		</div>
-		<div class="social-top">
-			<ul class="list-social">
-				<li class="icon-soc"><a href="#">&#xf099;</a></li>
-				<li class="icon-soc"><a href="#">&#xf09a;</a></li>
-				<li class="icon-soc"><a href="#">&#xf09b;</a></li>
-				<li class="icon-soc"><a href="#">&#xf0d5;</a></li>
-				
-			</ul>	
-		</div>
+<div id="support">
+	<nav id="navigation">
+<div class="logo-big">
 		
+<div class="logo">
+		<a href="<?php echo base_url("index.php/home"); ?>" >
+		<img src="<?php echo base_url("assets/images/community.png") ?>" height="80px" width="100px">
+	</a>
+</div>
+</div>
+                    <ul   id="menu">
+                        <li>
+                            <a href="<?php echo base_url("index.php/home");?>" >Home</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url("index.php/about");?>">About Us</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url("index.php/products");?>">Products</a>
+                        </li>
+                        <li  class="current">
+                            <a href="<?php echo base_url("index.php/support");?>">Support</a>
+                        </li>
+                    </ul>
+	</nav>	
 
-		<div class="impress">
-			<h1>WE ARE </h1>
+
+<div id="separator2">
+		<div class="separator2-wrap">
 			<div class="container">
-			<div class="sixteen columns">
-				<h1><span class="slide-text" style ="color:#0074D9;"></span></h1>
+				<div class="sixteen columns">
+					<h3>We are here to help you build an amazing product .. </h2>
+				</div>
 			</div>
+		</div>
+	</div>		
+	
 
+
+
+
+
+
+
+	<div id="contact">	
+		<div class="contact-info">
+			<div class="container">
+				
+				<div class="one-half column">
+					<h6>Phone:</h6>
+					<p>Support: +254 702 990 800</p>
+					<p>Director: +254 718 325 300</p>
+				</div>
+				<div class="one-half column">
+					<h6>Email:</h6>
+					<p>Support: <a href="mailto:support@equiplexdevelopers.com">support@equiplexdevelopers.com</a></p>
+					<p>Director: <a href="mailto:sales@equiplexdevelopers.com">sales@equiplexdevelopers.com</a></p>
+				</div>
+			</div>
 		</div>
 		<div class="container">
-			
-		<div class="login">
-			
-			Login to your account
-			<div class="five columns">
-				<form name="login" id="login" method="post">
-					
-					<input name="username" id="username" type="text" placeholder = "username" required  = "true" />
-					<input name="password" id="password" type="password"  placeholder = "password" required="true"/>
-					<input type="Submit" value="Login">
+			<div class="sixteen columns">
+				<form  method="post">
+				<h6>Say Hello</h6>
+					<label for="name">Name: * 
+						<span class="error" id="err-name">please enter name</span>
+					</label>
+					<input name="name" id="name" type="text" />
+					<label for="email">E-Mail: * 
+						<span class="error" id="err-email">please enter e-mail</span>
+						<span class="error" id="err-emailvld">e-mail is not a valid format</span>
+					</label>
+					<input name="email" id="email" type="text" />
+					<label for="message">Message:</label>
+					<textarea name="message" id="message"></textarea>
+					<button class="send_message" id="send">Submit</button>
+					<div class="error" id="err-form">There was a problem validating the form please check!</div>
+					<div class="error" id="err-timedout">The connection to the server timed out!</div>
+					<div class="error" id="err-state"></div>
 				</form>
-				
+				<div id="ajaxsuccess">Successfully sent!!</div>	
 			</div>	
 		</div>		
-
-
-		</div>
-
-		<div class="container">
-			<div class="register">
-			Join our community
-		
-			<div class="five columns">
-				<form name="register" id="register" method="post">
-					
-					<input name="name" id="name" type="text" placeholder = "Your Name" required  = "true" />
-					<input name="email" id="email" type="text" placeholder = "Your email" required  = "true" />
-					<input name="user" id="user" type="text" placeholder = "Your username" required  = "true" />
-					<input name="pass" id="pass" type="password"  placeholder = "Your password" required="true"/>
-					<input name="cpassword" id="cpassword" type="password"  placeholder = "confirm password" required="true"/>
-					<input type="Submit" value="Register">
-				</form>
-				
-			</div>	
-		</div>		
-
-
-		</div>
-
-
-		<div class="register">
-			
-		</div>
-			
-		</div>
-		
-		<div class="home-menus">
-			
-		<div class="home-menu1">
-			<a  href="<?php echo base_url("index.php/about")?>">
-				<div class="home-menu-but1">
-					<div class="home-menu-text1">About Us</div>
-				</div>
-				<div class="hi-icon-wrap1 hi-icon-effect-1">
-					<div class="hi-icon1 hi-icon-bolt">About</div>
-				</div>
-			</a>
-		</div>
-		
-		<div class="home-menu3">
-			<a href="<?php echo base_url("index.php/products")?>">
-				<div class="home-menu-but3">
-					<div class="home-menu-text3">Products</div>
-				</div>
-				<div class="hi-icon-wrap3 hi-icon-effect-3">
-					<div class="hi-icon3 hi-icon-cog">Products</div>
-				</div>
-			</a>
-		</div>
-		<div class="home-menu4">
-			<a href="<?php echo base_url("index.php/support")?>">
-				<div class="home-menu-but4">
-					<div class="home-menu-text4">Support</div>
-				</div>
-				<div class="hi-icon-wrap4 hi-icon-effect-4">
-					<div class="hi-icon4 hi-icon-glo">Support</div>
-				</div>
-			</a>
-		</div>
 	</div>	
 
 
-
-	</div>
-
-
-
-
-	</div>
-		
-
-	<div class="md-overlay"></div>		
-
-
 	
+		<!-- Copy
+	================================================== -->	 
 	
-
-	
+	<div id="copy">
+		<div class="container">
+			<div class="sixteen columns">
+				<p>© Equiplex Developers Community. All rights reserved. <a href = "equiplexdevelopers.com" >Equiplex Business Solutions</a>.</p>
+			</div>
+				
+		</div>	
+	</div>	
 	<!-- JAVASCRIPT
     ================================================== -->
 <script type="text/javascript" src="<?php echo base_url("assets/js/jquery.js") ?>"></script>
@@ -214,3 +185,4 @@ $('.bar-percentage[data-percentage]').each(function () {
 </body>
 
 </html>
+
