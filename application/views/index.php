@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]>
 <!--><html class="no-js" lang="en"><!--<![endif]-->
@@ -38,13 +38,12 @@
 
 	<!-- Primary Page Layout
 	================================================== -->
-	
-	
-
 	<!-- Home
 	================================================== -->	
 
 	<div id="home">
+		<div class="container"> 
+		<div class="sixteen columns">
 		<div class="logo-big">
 			<div class="logo">
 				<img src="<?php echo base_url("assets/images/community.png") ?>" height="80px" width="100px">
@@ -53,88 +52,44 @@
 				Equiplex Developers Community
 			</div>
 			<span>
-				 share with the rest of us				
+				 Share With The Rest Of Us				
 			</span>
 		</div>
-		<div class="social-top">
-			<ul class="list-social">
-				<li class="icon-soc"><a href="#">&#xf099;</a></li>
-				<li class="icon-soc"><a href="#">&#xf09a;</a></li>
-				<li class="icon-soc"><a href="#">&#xf09b;</a></li>
-				<li class="icon-soc"><a href="#">&#xf0d5;</a></li>
-				
-			</ul>	
+		</div>
 		</div>
 		
-
-		<div class="impress">
+		<div class="container" style="top : 10%">
 			<h1>WE ARE </h1>
 			<div class="container">
 			<div class="sixteen columns">
 				<h1><span class="slide-text" style ="color:#0074D9;"></span></h1>
 			</div>
+			
 
 		</div>
-		<div class="container">
-			
-		<div class="login">
-			
-			Login to your account
-			<div class="five columns">
-				<form name="login" id="login" method="post">
-					
-					<input name="username" id="username" type="text" placeholder = "username" required  = "true" />
-					<input name="password" id="password" type="password"  placeholder = "password" required="true"/>
-					<input type="Submit" value="Login">
-				</form>
+		</div>
+	 
 				
-			</div>	
-		</div>		
-
-
-		</div>
-
-		<div class="container">
-			<div class="register">
-			Join our community
-		
-			<div class="five columns">
-				<form name="register" id="register" method="post">
-					
-					<input name="name" id="name" type="text" placeholder = "Your Name" required  = "true" />
-					<input name="email" id="email" type="text" placeholder = "Your email" required  = "true" />
-					<input name="user" id="user" type="text" placeholder = "Your username" required  = "true" />
-					<input name="pass" id="pass" type="password"  placeholder = "Your password" required="true"/>
-					<input name="cpassword" id="cpassword" type="password"  placeholder = "confirm password" required="true"/>
-					<input type="Submit" value="Register">
-				</form>
-				
-			</div>	
-		</div>		
-
-
-		</div>
-
-
-		<div class="register">
-			
-		</div>
-			
-		</div>
-		
-		<div class="home-menus">
-			
 		<div class="home-menu1">
-			<a  href="<?php echo base_url("index.php/about")?>">
+			<a href="<?php echo base_url("index.php/about")?>">
 				<div class="home-menu-but1">
 					<div class="home-menu-text1">About Us</div>
 				</div>
 				<div class="hi-icon-wrap1 hi-icon-effect-1">
-					<div class="hi-icon1 hi-icon-bolt">About</div>
+					<div class="hi-icon1 hi-icon-bolt">About Us</div>
 				</div>
 			</a>
 		</div>
-		
+		<div class="home-menu2">
+			<a  href="<?php echo base_url("index.php/users")?>">
+				<div class="home-menu-but2">
+					<div class="home-menu-text2">Users</div>
+				</div>
+				<div class="hi-icon-wrap2 hi-icon-effect-2">
+					<div class="hi-icon2 hi-icon-pen">Users</div>
+				</div>
+			</a>
+		</div>
 		<div class="home-menu3">
 			<a href="<?php echo base_url("index.php/products")?>">
 				<div class="home-menu-but3">
@@ -155,7 +110,7 @@
 				</div>
 			</a>
 		</div>
-	</div>	
+	
 
 
 
@@ -168,6 +123,8 @@
 		
 
 	<div class="md-overlay"></div>		
+    
+   
 
 
 	

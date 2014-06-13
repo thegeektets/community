@@ -74,7 +74,7 @@
 				<p><strong>Category:</strong>  <?php echo $portfolio[0]["category"] ;?> </p>
 				<div class="btn-wrap">
 					<p>
-						<button>Live Preview</button>
+						<a href="<?php echo $portfolio[0]["website"] ;?>" target = "_blank"><button>Product Website</button></a>
 					</p>
 				</div>
 			
@@ -116,16 +116,13 @@
 			<div class="twelve columns">
 				<div id="slider">	
 					<ul class="bxslider">
-							<?php
- $i=0;
- While($i < count($portfolio)){
-?>
-		<li><img src="<?php echo $portfolio[$i]["product_pic"]?>"/></li>
-<?php
- $i++;
-
-}
- ?>
+							<?php $i=0;?>
+		<li><img src="<?php echo $portfolio[$i]["product_pic"] ?>"/></li>
+		<li><img src="<?php if( $portfolio[$i]["product_pic1"] != null ){ echo $portfolio[$i]["product_pic1"] ;  } else  { echo $portfolio[$i]["product_pic"] ; }?>"/></li>
+		<li><img src="<?php if( $portfolio[$i]["product_pic2"] != null ){ echo $portfolio[$i]["product_pic2"] ;  } else  { echo $portfolio[$i]["product_pic"] ; }?>"/></li>
+		<li><img src="<?php if( $portfolio[$i]["product_pic3"] != null ){ echo $portfolio[$i]["product_pic3"] ;  } else  { echo $portfolio[$i]["product_pic"] ; }?>"/></li>
+		<li><img src="<?php if( $portfolio[$i]["product_pic4"] != null ){ echo $portfolio[$i]["product_pic4"] ;  } else  { echo $portfolio[$i]["product_pic"] ; }?>"/></li>
+		
  
 							</ul>
 				</div>

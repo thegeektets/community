@@ -15,6 +15,12 @@ public function get_product(){
 $query = $this->db->query('select * from portfolio,developer_details where developer_details.developer_id = portfolio.developer_id');
 return $query->result_array();}
 
+public function get_newproducts(){
+$query = $this->db->query('select * from portfolio,developer_details where developer_details.developer_id = portfolio.developer_id
+	ORDER BY `date_time` DESC
+    LIMIT 0 , 5');
+return $query->result_array();}
+
 public function get_oneproduct($product_id){
 $query = $this->db->query('select * from portfolio,developer_details where developer_details.developer_id =
  portfolio.developer_id and portfolio.product_id ='.$product_id);

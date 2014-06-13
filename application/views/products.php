@@ -73,12 +73,12 @@
 	</nav>	
 		<div class="container">
 			<div class="sixteen columns">
-				<h1>Products from the community members, <span class="slide-text1"></span></h1>
+				<h1>Products from our community members, <span class="slide-text1"></span></h1>
 			</div>
 		</div>
 		<div class="container">
 			<div class="sixteen columns text-works">
-				<p>Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur est quis mauris accumsan eleifend sit amet non neq. Vivamus vitae purus eros, nec ullamcorper risus.</p>
+				<p>Developers and designers from our community have released different products out there in the market,below are necessary details  of the products</p>
 			</div>
 		</div>	
 		<div class="fil">	
@@ -107,6 +107,27 @@
  While($i < count($portfolio)){
  // var_dump($portfoliopics);
   ?>
+     <div class="content">
+              <div class="list-group">
+                
+                
+             <?php
+              $i=0;
+              while ($i < count($projects)){
+             ?>
+                <a href="<?php echo base_url("index.php/products/reviewproduct")."/".$projects[$i]['product_id']?>" class="list-group-item">
+                 <h5 class="list-group-item-heading">Project Name : <?php echo $projects[$i]["product_name"] ;?></h5>
+                <div>Project Category : <?php echo $projects[$i]["projectcategory"] ;?></div>  </a>
+                <div>Developer : <a href="<?php echo base_url("index.php/users/profile/".$projects[$i]["username"] );?>"><?php echo $projects[$i]["full_names"] ;?></a></div>
+              
+              <?php
+             $i++;
+           
+            }
+            ?>   
+
+                 </div>            
+            </div>
 
   <div class="box photography web-design">
  	<a href="products/reviewproduct/<?php echo $portfolio[$i]["product_id"]?>" >
